@@ -1,0 +1,2 @@
+This is an image uploader in web2py , user can upload a image and view his image and images uploaded by others and also like the images .
+Only the user who uploaded the image and the superadmin have the priviliges to delete the image.
