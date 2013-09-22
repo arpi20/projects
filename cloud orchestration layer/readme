@@ -1,0 +1,14 @@
+Build a fabric that can coordinate the provisioning of compute and storage resources by negotiating with a set of Hypervisors running across physical servers in the datacenter.
+
+Synatx for running the script :
+
+./script pm_file image_file vm_type
+
+pm_file : Contains a list of IP addresses separated by new-line. These addresses the Physical machines to be used for hosting VMs. A unique ID is to be assigned by you.
+
+image_file : Contains a list of Images(full path) to be used for spawning VMs. The name of the image is to be extracted from the path itself. A unique ID is to be assigned by you.
+
+vm_type: contains a list of Vm_types which gives the information about the paricular vm against the image number such as available ram , number of processors etc.
+
+After running the script, the rest server should be up and running.
+
