@@ -12,3 +12,4 @@ vm_type: contains a list of Vm_types which gives the information about the paric
 
 After running the script, the rest server should be up and running.
 
+
