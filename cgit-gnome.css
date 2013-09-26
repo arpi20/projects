@@ -245,6 +245,22 @@ a.branch-deco, a.tag-deco {
     text-shadow: 0 1px 0 #000000;
 }
 
+#top_bar a:hover {
+    background: #64696d;
+    background: rgba(100%, 100%, 100%, 0.2);
+}
+
+#top_bar a:focus {
+    background: rgba(100%, 100%, 100%, 0.15);
+}
+
+#top_bar a:active, #top_bar li.current-menu-item a, #top_bar li.current-page-ancestor a {
+    background: #1c2021 url("images/top_bar-item-bg.png") top repeat-x;
+    -moz-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+    box-shadow: inset 0 -1px 0 rgba(100%,100%,100%, 0.4), inset 0 1px 3px rgba(0,0,0,0.4);
+}
+
 .hidden {
     display: none;
 }
