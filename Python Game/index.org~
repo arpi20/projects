@@ -1,0 +1,40 @@
+#+TITLE: Assignment 04
+- Name :: Arpita Raj Gupta
+- Roll number :: 201101121
+* Class Decomposition
+I have one class named Robot.I implemented the objects via functions so that the state encapsulated in an object is available only to the functions defined in the objects constructor definition.
+My class is an empty class.I created a function myfunc in which I initialised my window from curses library and the coordinates of robot ,number of diffuse codes,size of robot in variables and I have accessed my object named self and this function contains many other methods--- bombs(to position the bombs on the window),codes(to place the diffuse codes)  and many other methods for executing my level.
+** level10():
+   This is my function which gets executed when I run my level 1. Level 1 consists of collecting required number of diffuse codes 
+and then if it approaches the bomb then it is able to diffuse the bomb and game promotes to the next level.
+** level20():
+   This is my function which gets executed when i am on level 2. Level 2 consists of diffuse codes(D),wrong codes(E).if the robot touches the wrong codes (E) then it has to collect that many more diffuse codes(D) to clear the level.
+** level30():
+   This is my function which gets executed when I am on level 3. Level 3 consits of diffuse codes(D) and wrong codes(E) which have same functions as in level 2.In addition i created a barrier(XXX..whose lenghth can be varied by changin self.sm).
+If the robot touches the barrier,the robot gets bounced back and the barrier also shifts by one position.To win the game the robot still needs to collect the required number of diffuse codes.
+
+* Advantages
+** Class
+  By referring to class we I was able to access multiple functions within a single function.
+** Flexibility
+  Yes,my code is flexible upto some extent .We can change the instructions to be executed if the robot touches the diffuse codes or the wrong codes or  the wall and thus can make altogether a different game.
+I can also add levels to the existing game by just including functions for level ahead without changing anything in the present code which can increase the hardness level of the code.
+
+* Miscellaneous
+** Program Control flow
+  I called my function myfunc and passed my level number as an argument in it.
+Inside myfunc I called other my other functions bomb,codes,robo,run,and the functions to execute the various levels.
+and then returned back the value of flag from the myfunc() via a object of the class named b.Flag tells the main function that whether to promote to next level or not
+** Logic
+ I used randrange to generate the coordinates of bomb,diffuse codes and one coordinate of the square robot. 
+The basic logic is involved in how to move the robot.Soppose the robot is going to the right and the space to the right just contain space characters(i.e.) the robot is free to move ahead,then i replace the first coloumn of robot 
+by space characters and create a new coloumn ahead (towards right) by the characters R.Similarly when the robot is moving to left,up and down.
+In my level 3: if the robot strikes the barrier then if key=KEY_LEFT i made key=KEY_RIGHT and similarly i made robot to bounce back.
+
+* Extra Features
+Extra features include the 2 extra levels designed which are mentioned above.
+** screen shot of level 1
+D are the diffuse codes B is the bomb and 5*5 square R is the robot.
+[[file:level1.png][level1.png]]
+** screen shot of level 3
+[[file:level3.png][level3.png]]
